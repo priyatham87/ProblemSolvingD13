@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Assignment
+        //1) Write a js program to print lower case first followed by upper case letters.
+        // input : Enter a string: I am Good
+        // amoodIG.
+        str = "I am Good"
+        lower = "";
+        upper = "";
+        for (i of str) {
+            if (i != " ") {
+                if (i.toUpperCase(0) == i) {
+                    upper += i
+                }
+                else {
+                    lower += i
+                }
+            }
+        }
+        console.log("lower case first followed by upper case letters in an given string is:" + lower + upper)
+
+        // 2) Write a js program to print one lower letter next one upper letter and so.. on.
+        // input: Enter a string: I am Good
+        // aImGood
+        s = "I am Good"
+        u = ""
+        l = ""
+        res = ""
+        for (i of s) {
+            if (i != " ") {
+                if (i.toUpperCase(0) == i) {
+                    u += i
+                }
+                else {
+                    l += i
+                }
+            }
+        }
+        for (i in s) {
+            if (l[i] != undefined) {
+                res += l[i];
+            }
+            if (u[i] != undefined) {
+                res += u[i];
+            }
+        }
+        console.log("The order of small and Capital letters in an given String is:" + res)
+    </script>
+
+</body>
+
+</html>
